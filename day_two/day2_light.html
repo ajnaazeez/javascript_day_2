@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic light simulator</title>
+</head>
+<body>
+    <h1>TRAFFIC LIGHT SIMULATOR</h1>
+    <P>enter a traffic light color(red,yellow,green) :</P>
+    <input id="light" type="text" placeholder="Type color here"> 
+    <button onclick="checklight()">check</button> 
+    <p id="result"></p>
+
+<script>
+    const checklight = () => {
+        let light = document.getElementById("light").value.toLowerCase();
+        let result= document.getElementById("result");
+
+        if(light === "red"){
+            result.innerText="Stop";
+        }else if(light === "yellow"){
+            result.innerText="Get ready";
+        }else if(light === "green"){
+            result.innerText="go";
+        }else{
+            result.innerText="invalid color!";
+        }
+    };
+</script>
+    
+</body>
+</html>
